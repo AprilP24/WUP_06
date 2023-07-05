@@ -48,7 +48,9 @@ barchartGC(~race + cappun,data=mydata)
 barchartGC(~race + cappun,data=mydata, type="percent")
 
 ```
+
 The white race is more in favor of capital punishment, but the other race comes in 2nd to being in favor than the black race. The black race has more people who are opposed of capital punishment with the other race coming in 2nd.
+
 
 ## Now with LESS data (more variables give less data due to NA's) create the approate graphic displays to answer the question.
 
@@ -62,8 +64,13 @@ The white race is more in favor of capital punishment, but the other race comes 
 
 
 
+```{r}
+table1 <- xtabs(~race + cappun, data=mydata)
+rowPerc(table1)
+colPerc(table1)
+```
 
-
+The white race still have the highest percentage of 67.75 who are in favor of capital punishment with the other race having a percentage that is very close to the white race with a 61.25. The black race has the highest percentage of 52.76 who are opposed of capital punishment. with all the races still having an equal amount of people in each one.  
 
 ## Inferential Results
 
